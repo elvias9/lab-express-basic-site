@@ -1,0 +1,173 @@
+body {
+    margin: 10px;
+    //background-color: lightblue;
+    font-family: 'Crimson Text', serif;
+    height: 900px;
+}
+
+nav {
+    width:100%;
+  }
+
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #226d7c;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .intro {
+    background-image: url("/images/RogerHome.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 800px;
+    width: 100%;
+    margin-top: 50px;;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #intro-page {
+    color: #FFF;
+    text-align: center;
+     vertical-align: middle;
+     line-height: 900px;
+     font-size: 50px;
+  }
+
+  h1 {
+    color: #226d7c;
+    font-size: 50px;
+    text-align: center;
+    
+  }
+
+  h3 {
+    font-size: 30px; 
+    color: #226d7c;
+  }
+
+  p {
+    color: #226d7c;
+    font-size: 20px;
+  }
+
+  .about {
+      margin-left: 10%;
+      margin-right: 10%;
+  }
+
+  aside {
+    width: 45%;
+    float: left;
+    padding-left: 15px;
+    margin-left: 15px;
+  }
+
+  aside img {
+    width: 45%;
+
+  }
+
+  .foundation {
+    width: 50%;
+    float: right;
+  }
+
+  .foundation img {
+    width: 50%;
+
+  }
+
+  .works {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .gallery {
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    --stagger-delay: 100ms;
+  }
+  .box {
+    border: 5px solid #226d7c;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    transition-duration: 1s;
+    background-position: center;
+    background-size: cover;
+    animation: cardEntrance 700ms ease-out;
+  }
+  
+  @keyframes cardEntrance {
+    from {
+      opacity: 0;
+      transform: scale(0.0)
+    } 
+    to {
+      opacity: 1;
+      transform: scale(1)
+    }
+  }
+  
+  .box:hover {
+    flex: 2;
+  }
+  
+  .box:nth-of-type(1) {
+    background-image: url("/images/firstWimbledon.jpg");
+    animation-delay: calc(1 * var(--stagger-delay))
+  }
+  
+  .box:nth-of-type(2) {
+    background-image: url("/images/roger-roland.jpg");
+    animation-delay: calc(2 * var(--stagger-delay))
+  }
+  
+  .box:nth-of-type(3) {
+    background-image: url("/images/FedererAO.jpg");
+    animation-delay: calc(3 * var(--stagger-delay))
+  }
+  
+  .box:nth-of-type(4) {
+    background-image: url("/images/wimbledon2.jpeg");
+    animation-delay: calc(4 * var(--stagger-delay))
+  }
+  .box:nth-of-type(5) {
+    background-image: url("/images/AO2.jpg");
+    animation-delay: calc(5 * var(--stagger-delay))
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      flex-direction: column;
+    }
+    .box {
+      width: 80vw;
+    }
+  }
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+      .container {
+        flex-direction: column;
+      }
+      .box {
+        width: 80vw;
+        color: red;
+      }
+  }
